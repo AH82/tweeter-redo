@@ -1,22 +1,23 @@
-nav{
+nav {
   height: 120px;
   width: 1 vw;
   padding: 1.5em;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+}
 
 }
 
-nav span {
+nav > span {
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 36px;
 }
 
-nav div {
+nav > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
