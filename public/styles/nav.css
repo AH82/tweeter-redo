@@ -1,6 +1,8 @@
 nav {
+  position: fixed; 
+  top: 0;
   height: 120px;
-  width: 1 vw;
+  width: 100%;
   padding: 1.5em;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -8,6 +10,8 @@ nav {
   justify-content: space-between;
 }
 
+nav + * {
+  padding-top: 120px;
 }
 
 nav > span {
