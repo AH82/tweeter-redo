@@ -25,6 +25,9 @@ body {
   font-style: normal;
   /* padding-top: 120px; */
     /* replaced in nav.css by -> nav + * {padding-top: 120px;} */ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 strong {
@@ -34,3 +37,12 @@ strong {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main.container {
+   background-color: inherit;
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
