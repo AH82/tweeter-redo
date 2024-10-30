@@ -39,7 +39,7 @@ section.new-tweet {
       font-family: "Bungee", sans-serif;
       font-weight: 400;
       font-style: normal;
-      
+
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -55,3 +55,6 @@ section.new-tweet {
   }
 }
 
+.counter-warning { 
+  color : red; 
+}
