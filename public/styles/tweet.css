@@ -11,6 +11,7 @@ article.tweet > * {
 article.tweet {
   border: 5px solid #545149;
   padding: 5px;
+  margin: 3% 0;
 
   & header, footer {
     display: flex;
