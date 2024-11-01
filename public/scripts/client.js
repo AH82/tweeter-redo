@@ -56,12 +56,7 @@ const createTweetElement = function (tweet) {
 
 </article>
 `;
-
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-// TODO: Consider changing section.tweet-container into #tweet-container
-// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-$('section.tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+return $tweet
 }; 
 
 
@@ -80,5 +75,12 @@ const renderTweets = function (tweets) {
   // takes return value and appends it to the tweets container
 };
 $(document).ready(function(){
-  createTweetElement(tweetData);
+  
+  const $tweet =  createTweetElement(tweetData);
+
+  // Test / driver code (temporary)
+  console.log($tweet); // to see what it looks like
+  // TODO: Consider changing section.tweet-container into #tweet-container
+  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  $('section.tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 });
