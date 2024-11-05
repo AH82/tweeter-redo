@@ -98,10 +98,20 @@ $(document).ready(function(){
     const CHAR_LIMIT = 140;
     const $textareaValue = $("#tweet-text").val()
 
+    // hide Tweet Error by default, 
+    $(this).parent().find("p.error-msg").slideUp();
+
+    // show error helper function
+    const displayTweetError =  (errorMsg) => 
+      $(this)
+      .parent().find("p.error-msg").slideDown()
+      .find("span").text(errorMsg);
+
+
     if (!$textareaValue) {
-      alert("Tweet can not be empty, Please write something")
+      displayTweetError("Tweet can not be empty, Please write something");
     } else if ($textareaValue.length > CHAR_LIMIT) { 
-      alert(`Tweets can not exceed ${CHAR_LIMIT} characters, You typed ${$textareaValue.length}`)
+      displayTweetError(`Tweets can not exceed ${CHAR_LIMIT} characters, You typed ${$textareaValue.length}`);
     } else {
       $.ajax("/tweets", { 
         method: 'POST', 
