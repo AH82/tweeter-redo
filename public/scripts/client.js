@@ -96,4 +96,16 @@ $(document).ready(function(){
   console.log("rendering tweets ....")
   renderTweets(data);
 
+  /**
+   * @description New Tweet <form> POST request through AJAX, preventing default
+   * "/tweet" endpoint takes a query string, hence @method serialize()
+   */
+  $("section.new-tweet form").on("submit", function (event) {
+    event.preventDefault();
+    $.ajax("/tweets", { 
+      method: 'POST', 
+      data: $(this).serialize()
+    })
+  });
+
 });
