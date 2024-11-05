@@ -6,6 +6,7 @@
 
 /**
  * @summary turns tweet data into a tweet DOM element.
+ * @function createTweetElement
  * @param {object} tweet - the tweet data object
  * @returns {string} - returns a string representing a tweet elemnt  
 */
@@ -47,6 +48,7 @@ return $tweet
 
 /**
  * @summary inserts/appends the list of tweet DOM elemnts, 
+ * @function renderTweets
  * @param {object[]} tweets - Array of objects representing tweets' data.
  * 
  * @description 
@@ -66,6 +68,10 @@ const renderTweets = function (tweets) {
 $(document).ready(function(){
 
   /**
+   * @summery Submits/Posts a new tweet
+   * @async
+   * @function
+   * @this form (data)
    * @description New Tweet <form> POST request through AJAX, preventing default
    * "/tweet" endpoint takes a query string, hence @method serialize()
    */
@@ -78,9 +84,11 @@ $(document).ready(function(){
   });
 
   /**
-   * @description 
+   * @async
+   * @function loadTweets
     * responsible for fetching tweets from "/tweets",
-    * loads/renders them using @function renderTweets
+    * loads/renders them using 
+    * @borrows @function renderTweets
    */
   const loadTweets = function() {
     $.ajax("/tweets")
