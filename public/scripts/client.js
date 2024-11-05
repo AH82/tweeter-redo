@@ -88,7 +88,23 @@ $(document).ready(function(){
       $.ajax("/tweets", { 
         method: 'POST', 
         data: $(this).serialize()
-      })
+      }).then(function() {
+        /**
+         * @summary seamlessly loads just-submitted Tweet. maybe not very DRY
+         * @Previously 
+          * used @function loadTweets(); 
+          * inserting in its top ```$('section.tweet-container').empty();```
+          * but it has noticable loading time by naked eye.
+         */
+        $.ajax("/tweets").then(
+          function (tweets) {
+            const newTweet = tweets.findLast(tweet => tweet.content.text === $textareaValue); //ensures last tweet if exact text value exists 
+            $('section.tweet-container').prepend(createTweetElement(newTweet));
+
+          }
+
+        ) 
+      });
     }
   });
 
