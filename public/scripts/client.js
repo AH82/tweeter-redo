@@ -61,7 +61,7 @@ return $tweet
 const renderTweets = function (tweets) {
   console.log("rendering tweets ....")
   tweets.forEach($tweet => 
-    $('section.tweet-container').append(createTweetElement($tweet)));
+    $('section.tweet-container').prepend(createTweetElement($tweet)));
 };
 
 $(document).ready(function(){
