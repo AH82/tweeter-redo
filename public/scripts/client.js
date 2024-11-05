@@ -4,6 +4,24 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+/**
+ * @summary escape function to avoid XSS while rendering.
+ * @param {string} str - potentially unsafe string html
+ * @returns {string} - safe string for use in html
+ * 
+ * @description 
+ * helper function. 
+ * uses vanilla JS DOM because @function createTweetElement 
+ * uses string laterals to construct the html element (tweet).
+ */
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 /**
  * @summary turns tweet data into a tweet DOM element.
  * @function createTweetElement
@@ -26,7 +44,7 @@ const createTweetElement = function (tweet) {
     </div>
   </header>
   <p>
-    ${tweet.content.text}
+    ${escape(tweet.content.text)}
     </p>
     <footer>
     <div>
