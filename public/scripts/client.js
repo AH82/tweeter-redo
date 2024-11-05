@@ -108,4 +108,17 @@ $(document).ready(function(){
     })
   });
 
+  /**
+   * @description 
+    * responsible for fetching tweets from "/tweets",
+    * loads/renders them using @function renderTweets
+   */
+  const loadTweets = function() {
+    $.ajax("/tweets")
+      .then(function(tweets) {
+        renderTweets(tweets);
+      })
+      .then( () => console.log("tweets loaded successfully!"))
+  };
+  loadTweets(); 
 });
