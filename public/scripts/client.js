@@ -140,9 +140,8 @@ $(document).ready(function(){
   
   /**
    * @summary Reveals & toggles Form "section.new-tweet" through Nav 
-   * This function is IIFE (Immediately Invoked Function Expression)
   */
-  const toggleFormThroughNav = function () { // IIFE
+  const toggleFormThroughNav = function () {
     $("nav > div") // Nav => "Write a new tweet"
     .on("click", function () {
       $("section.new-tweet").slideToggle({
@@ -150,7 +149,8 @@ $(document).ready(function(){
         complete: function() { $(this).find("form textarea").focus() }
       });
     })
-  }();
+  };
+  toggleFormThroughNav();
 
   
   /**
