@@ -40,11 +40,48 @@ nav > div:hover > i {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   */
-  animation: bounce 1.5s alternate infinite ;
+  animation: bounce-down 1.5s alternate infinite ;
 }
 
-@keyframes bounce {
+@keyframes bounce-down {
   0% { transform: translateY(0);}
   50% { transform: translateY(10px);}
   100% { transform: translateY(0); }
+}
+
+@keyframes bounce-up {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+  100% { transform: translateY(0); }
+}
+
+
+
+#scroll-top-btn {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  box-shadow: 2px 2px 2px lightslategrey;
+  cursor: pointer;
+  padding: 2%;
+  
+  /* margin: 1%; */
+  /* position: sticky; bottom: 1%;
+  margin-left: auto;
+  margin-right: -5%; */
+  position: fixed; bottom: 1%; right: 1%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: bounce-up 0.5s alternate 3 ;
+
+}
+
+#scroll-top-btn i {
+  color: white;
+  font-weight: 600;
 }
