@@ -139,34 +139,19 @@ $(document).ready(function(){
   
   
   /**
-   * Form Toggle = "Write a new tweet" click Event-Handler
-   * Pseudo code 
-   * Sources & Events 
-      * @todo [] html: form section will be hidden by default 
-      * @todo [] in Nav: 
-          * @todo [] "write a new tweet" -> on "Click" => opens toggled form
-          * @todo [] animate chevron (CSS or jQuery?)
-   * Event-Handling 
-      * @todo [] $("section.new-tweet").slideUp by default 
-      * @todo [] $("section.new-tweet").slideDown
-      * @todo [] AND makes textarea focus.
-      * Optional (maybe): 
-      * @todo [] compost tweet closes after submission 
-      * @todo [] OR offer an easy option on it to toggle up
-      * @todo [] 
-      * @todo [] 
-   * @todo [] 
-   * 
-   * 
+   * @summary Reveals & toggles Form "section.new-tweet" through Nav 
+   * This function is IIFE (Immediately Invoked Function Expression)
   */
-  const toggleForm = function () {
-    console.log("form toggled!");
+  const toggleFormThroughNav = function () { // IIFE
+    $("nav > div") // Nav => "Write a new tweet"
+    .on("click", function () {
+      $("section.new-tweet").slideToggle({
+        duration: 1000,
+        complete: function() { $(this).find("form textarea").focus() }
+      });
+    })
+  }();
 
-   
-  }; 
-
-  // FORM TOGGLE initiator
-  $("nav > div" /* Write a new tweet */).on("click", toggleForm);
   
   /**
    * @async
