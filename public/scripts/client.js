@@ -152,7 +152,39 @@ $(document).ready(function(){
   };
   toggleFormThroughNav();
 
-  
+  /**
+   * second toggle button which appears on scroll down 
+   * button scrolls back to the top and disappears when clicked.
+   */
+  const bottomToggleBtn = function () {
+    $("#scroll-top-btn")
+      .hide(0)
+    $(window)
+    .on("scroll", function(){
+      console.log("scrolling");
+
+      $("#scroll-top-btn")
+      .show(200)
+      .on("click", function(){
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+        
+        $("section.new-tweet").slideDown({
+          duration: 1000,
+          complete: function() { $(this).find("form textarea").focus() }
+        });
+        setTimeout(() => 
+          $(this).hide(200)
+      , 1000) // the delay is to avoid retriggering the scroll event and showing the element
+      })
+    })
+
+  };
+  bottomToggleBtn();
+
   /**
    * @async
    * @function loadTweets
