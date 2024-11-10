@@ -1,7 +1,12 @@
+  /* 
+   * --nav-height defined in layout.css  
+   */
+
 nav {
   position: fixed; 
   top: 0;
-  height: 120px;
+  /* height: 120px; */
+  height: var(--nav-height);
   width: 100%;
   padding: 1.5em;
   background-color: #4056A1;
@@ -10,9 +15,6 @@ nav {
   justify-content: space-between;
 }
 
-nav + * {
-  padding-top: 120px;
-}
 
 nav > span {
   font-family: "Bungee", sans-serif;
