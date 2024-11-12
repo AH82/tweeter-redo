@@ -1,7 +1,6 @@
 /* 
- * --nav-height defined in layout.css  
- */
-
+* --nav-height defined in layout.css  
+*/
 header.profile-header {
   margin-top: var(--nav-height);
   background-color: #F3B137;
@@ -12,13 +11,16 @@ header.profile-header {
   justify-content: center;
   align-items: center;
 }
+header.profile-header h2 {
+  color: #FFFFFF;
+}
 
 @media only screen and (min-width: 1024px) {
   header.profile-header {
     width: 50%;
-    padding: calc(var(--nav-height)/4) 5%;
-    margin: calc(var(--nav-height)/2);
-    margin-top: calc(var(--nav-height)*2);
+    padding: calc(var(--nav-height) / 4) 5%;
+    margin: calc(var(--nav-height) / 2);
+    margin-top: calc(var(--nav-height) * 2);
   }
   header.profile-header > br {
     display: none;

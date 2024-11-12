@@ -11,42 +11,36 @@ article.tweet {
   border: 5px solid #545149;
   padding: 5px;
   margin-bottom: 3%;
-
-  & header, footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;      
-  }
-  & header div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  & header div img {
-    margin-right: 0.5em;
-  }
-
-  & p {
-    font-weight: 600;
-  }
-
-  & footer{
+}
+article.tweet header, article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+article.tweet header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+article.tweet header div img {
+  margin-right: 0.5em;
+}
+article.tweet p {
+  font-weight: 600;
+}
+article.tweet footer {
   border-top: 5px solid #545149;
   padding: 5px;
   font-size: smaller;
-  }
-
-  & footer div i { 
-  color: navy;
-  }
-
-  & footer div i:hover { 
+}
+article.tweet footer div i {
+  color: #4056A1;
+}
+article.tweet footer div i:hover {
   color: goldenrod;
-  }
 }
 
 article.tweet:hover {

@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,7 +14,6 @@ html {
 /*
  * Global layout stuff
  */
-
 :root {
   --nav-height: 120px;
 }
@@ -28,7 +28,7 @@ body {
   font-weight: 300;
   font-style: normal;
   /* padding-top: 120px; */
-    /* replaced in nav.css by -> nav + * {padding-top: 120px;} */ 
+  /* replaced in nav.css by -> nav + * {padding-top: 120px;} */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,17 +41,14 @@ strong {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- main.container {
-   background-color: inherit;
-   width: 90%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-top: 20px;
- }
-
- 
+main.container {
+  background-color: inherit;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 
 @media only screen and (min-width: 1024px) {
   body {
@@ -59,9 +56,7 @@ strong {
     flex-direction: row;
     align-items: flex-start;
   }
-
   main.container {
-    margin-top: calc(var(--nav-height)*2);
+    margin-top: calc(var(--nav-height) * 2);
   }
-
 }
