@@ -15,34 +15,36 @@ nav {
   justify-content: space-between;
 }
 
+nav > {
 
-nav > span {
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 36px;
-}
+  span {
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+  }
 
-nav > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-nav div > * {
-  margin: 0%;
-  cursor: pointer;
-}
-
-/* "write a new tweet" */
-nav > div:hover > i {
-  /* 
-  animation-name: bounce; 
-  animation-duration: 1.5s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  */
-  animation: bounce-down 1.5s alternate infinite ;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & > * {
+      margin: 0%;
+      cursor: pointer;  
+    }
+    
+    /* "write a new tweet" link */
+    & :hover > i {
+      /* 
+      animation-name: bounce; 
+      animation-duration: 1.5s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      */
+      animation: bounce-down 1.5s alternate infinite ;
+    }
+  }
 }
 
 @keyframes bounce-down {
