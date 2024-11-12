@@ -1,16 +1,15 @@
 /* 
- * --nav-height defined in layout.css  
- */
+* --nav-height defined in layout.css  
+*/
+
+@import './vertical-align-mixin';
 
 header.profile-header {
   margin-top: var(--nav-height);
   background-color: #F3B137;
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include align-vertical(column);
 }
 
 @media only screen and (min-width: 1024px) {
