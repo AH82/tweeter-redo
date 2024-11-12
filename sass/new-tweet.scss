@@ -1,0 +1,72 @@
+section.new-tweet {
+  width: 90%;
+  margin-bottom: 5%;
+
+  /* h2 here */
+  & h2 {
+    margin-top: 0;
+  }
+
+  & form {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+
+
+  & label {
+        width: inherit;
+        margin: inherit;
+        font-weight: 600;
+       
+    }
+
+    & textarea {
+      width: inherit;
+      background-color: inherit;
+      border: 0;
+      border-bottom: 5px solid black;
+      resize: none;
+      
+      &:focus {
+        outline: 0;
+      }
+    }
+
+
+    & div {
+      width: inherit;
+      padding: 0.5em;
+      margin: 0;
+      font-family: "Bungee", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      & button {
+        background-color: #4056A1;
+        color: #FFFFFF;
+      }
+
+    }
+
+  }
+}
+
+.counter-warning { 
+  color : red; 
+}
+
+.error-msg {
+  color: red;
+  font-weight: 600;
+  border: 5px solid red;
+  padding: 1% 5%;
+  
+}

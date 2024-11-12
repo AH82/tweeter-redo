@@ -1,0 +1,89 @@
+  /* 
+   * --nav-height defined in layout.css  
+   */
+
+nav {
+  position: fixed; 
+  top: 0;
+  /* height: 120px; */
+  height: var(--nav-height);
+  width: 100%;
+  padding: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+nav > span {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+}
+
+nav > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav div > * {
+  margin: 0%;
+  cursor: pointer;
+}
+
+/* "write a new tweet" */
+nav > div:hover > i {
+  /* 
+  animation-name: bounce; 
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  */
+  animation: bounce-down 1.5s alternate infinite ;
+}
+
+@keyframes bounce-down {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(10px);}
+  100% { transform: translateY(0); }
+}
+
+@keyframes bounce-up {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+  100% { transform: translateY(0); }
+}
+
+
+
+#scroll-top-btn {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: none;
+  background-color: red;
+  box-shadow: 2px 2px 2px lightslategrey;
+  cursor: pointer;
+  padding: 2%;
+  
+  /* margin: 1%; */
+  /* position: sticky; bottom: 1%;
+  margin-left: auto;
+  margin-right: -5%; */
+  position: fixed; bottom: 1%; right: 1%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: bounce-up 0.5s alternate 3 ;
+
+}
+
+#scroll-top-btn i {
+  color: white;
+  font-weight: 600;
+}
