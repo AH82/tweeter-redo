@@ -11,6 +11,9 @@ header.profile-header {
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   width: 100%;
   @include align-vertical(column);
+  & h2 {
+    color: $font-color-secondary;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
