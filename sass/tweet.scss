@@ -10,7 +10,7 @@ article.tweet > * {
 }
 
 article.tweet {
-  border: 5px solid #545149;
+  border: 5px solid $font-color-primary ;
   padding: 5px;
   margin-bottom: 3%;
 
@@ -37,13 +37,13 @@ article.tweet {
   }
 
   & footer{
-  border-top: 5px solid #545149;
+  border-top: 5px solid $font-color-primary;
   padding: 5px;
   font-size: smaller;
   }
 
   & footer div i { 
-  color: navy;
+  color: $bg-color-nav;
   }
 
   & footer div i:hover { 

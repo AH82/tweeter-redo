@@ -1,7 +1,7 @@
   /* 
    * --nav-height defined in layout.css  
    */
-   
+
 @import 'default-value-variables';
 @import './vertical-align-mixin';
 
@@ -9,11 +9,12 @@ nav {
   position: fixed; 
   top: 0;
   /* height: 120px; */
-  height: var(--nav-height);
+  // height: var(--nav-height);
+  height: $nav-height;
   width: 100%;
   padding: 1.5em;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: $bg-color-nav;
+  color: $font-color-secondary;
   display: flex;
   justify-content: space-between;
 }
@@ -21,7 +22,7 @@ nav {
 nav > {
 
   span {
-    font-family: "Bungee", sans-serif;
+    font-family: $font-heading;
     font-weight: 400;
     font-style: normal;
     font-size: 36px;
@@ -88,6 +89,6 @@ nav > {
 }
 
 #scroll-top-btn i {
-  color: white;
-  font-weight: 600;
+  color: $font-color-secondary;
+  font-weight: $font-weight-strong;
 }

@@ -42,7 +42,7 @@ section.new-tweet {
       width: inherit;
       padding: 0.5em;
       margin: 0;
-      font-family: "Bungee", sans-serif;
+      font-family: $font-heading;
       font-weight: 400;
       font-style: normal;
 
@@ -52,8 +52,8 @@ section.new-tweet {
       align-items: center;
 
       & button {
-        background-color: #4056A1;
-        color: #FFFFFF;
+        background-color: $bg-color-nav ;
+        color: $font-color-secondary ;
       }
 
     }
