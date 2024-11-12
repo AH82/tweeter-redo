@@ -33,13 +33,13 @@ nav > {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    & > * {
+    &> * {
       margin: 0%;
       cursor: pointer;  
     }
     
     /* "write a new tweet" link */
-    & :hover > i {
+    &:hover > i {
       /* 
       animation-name: bounce; 
       animation-duration: 1.5s;
