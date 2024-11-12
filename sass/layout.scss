@@ -18,14 +18,25 @@ html {
   --nav-height: 120px;
 }
 
+// SCSS Variables 
+$font-main: "Source Sans 3", sans-serif;
+$font-heading: "Bungee", sans-serif;
+$font-weight-default: 300;
+$font-weight-strong: 600;
+$font-size-default: 24px;
+$font-color-primary: #545149;
+$bg-color-main: cornsilk;
+$nav-height: 120px;
+
+
 body {
-  color: #545149;
+  color: $font-color-primary;
   background-color: #f4f1ec;
-  background-color: cornsilk;
-  font-size: 24px;
-  font-family: "Source Sans 3", sans-serif;
+  background-color: $bg-color-main;
+  font-size: $font-size-default;
+  font-family: $font-main;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: $font-weight-default;
   font-style: normal;
   /* padding-top: 120px; */
     /* replaced in nav.css by -> nav + * {padding-top: 120px;} */ 
@@ -35,7 +46,7 @@ body {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: $font-weight-strong;
 }
 
 /*
